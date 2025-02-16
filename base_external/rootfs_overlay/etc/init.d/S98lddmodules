@@ -1,0 +1,16 @@
+#! /bin/sh
+
+case "$1" in
+    start)
+        echo "Starting scull and hello"
+        modprobe hello
+    ;;
+    stop)
+        echo "Stopping scull and hello"
+        rmmod hello
+    ;;
+    *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+    exit 0
